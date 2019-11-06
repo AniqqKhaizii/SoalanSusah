@@ -1,0 +1,76 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+
+void circle(double radius)
+{
+	const double PI = 3.14159;
+	double areaC;
+	areaC = PI * radius * radius;
+	cout << "The area of the circle is " << areaC << endl;
+}
+
+void rectangle(double length, double width)
+{
+	double areaR;
+	areaR = length * width;
+	cout << "The area of the rectangle is " << areaR << endl;
+}
+
+void triangle(double trilength, double height)
+{
+	double areaT;
+	areaT = 0.5 * trilength * height;
+	cout << "The area of the triangle is " << areaT << endl;
+}
+int main()
+{
+	cout << "Geometry Calculator" << endl;
+	cout << "\t1. Calculate the Area of a Circle" << endl;
+	cout << "\t2. Calculate the Area of a Rectangle" << endl;
+	cout << "\t3. Calculate the Area of a Triangle" << endl;
+	cout << "\t4. Quit" << endl;
+
+	int choice;
+	cout << "Enter your choice (1-4)" << endl;
+	cin >> choice;
+
+	if (choice == 1)
+	{
+		double radius;
+		cout << "Enter the circle radius" << endl;
+		cin >> radius;
+		circle(radius);
+	}
+	else
+		if (choice == 2)
+		{
+			double length, width;
+			cout << "Enter the rectangle length" << endl;
+			cin >> length;
+			cout << "Enter the rectangle width" << endl;
+			cin >> width;
+			rectangle(length, width);
+		}
+		else
+			if (choice == 3)
+			{
+				double trilength, height;
+				cout << "Enter the triangle's base length" << endl;
+				cin >> trilength;
+				cout << "Enter the triangle height" << endl;
+				cin >> height;
+				triangle(trilength, height);
+			}
+			else
+				if (choice == 4)
+				{
+					exit(0);
+				}
+				else
+				{
+					cout << "WOI TAKFAHAM BAHASA KA 1-4 JALAA!?!??!" << endl;
+
+				}
+	return 0;
+}
