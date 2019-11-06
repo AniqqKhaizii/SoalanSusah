@@ -1,0 +1,39 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+int flip();
+
+int main()
+{
+	char answer;
+	cout << "Enter your guess for coin toss either H = Head or T = Tail" << endl;
+	cin >> answer;
+
+	int coin;
+	coin = flip();
+
+	if (coin == 0)
+	{
+		if (answer == 'H')
+			cout << "You Lose" << endl;
+		else
+			if (answer == 'T')
+				cout << "You Win" << endl;
+	}
+
+	if (coin == 1)
+	{
+		if (answer == 'H')
+			cout << "You Win" << endl;
+		else
+			if (answer == 'T')
+				cout << "You Lose" << endl;
+	}
+}
+int flip()
+{
+	srand(time(0));
+		return rand() % 2;
+}
